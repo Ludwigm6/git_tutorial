@@ -249,16 +249,30 @@ Marvin Ludwig
 <li>…</li>
 </ul>
 </div>
+<div id="github-related-commands" class="slide section level1">
+<h1>Github related commands</h1>
+<div class="sourceCode" id="cb4"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> remote</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> pull</span></code></pre></div>
+<ul>
+<li>Forking</li>
+<li>Pull requests</li>
+</ul>
+</div>
+<div id="rstudio-integration" class="slide section level1">
+<h1>Rstudio Integration</h1>
+<p>Rstudio can serve as a powerful user interface for git!</p>
+</div>
 <div id="real-world-example-bugfix" class="slide section level1">
 <h1>Real World Example: Bugfix</h1>
 <p>There is a small Bug in the r-package <code>getSpatialData</code></p>
 <p><a href="https://github.com/16EAGLE/getSpatialData">https://github.com/16EAGLE/getSpatialData</a></p>
 <p>In the file <code>R/internal_clients.R</code> Line 40:</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># wrong:</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="fu">lapply</span>(uuid, <span class="cf">function</span>(x) <span class="fu">content</span>(<span class="fu">.get</span>(<span class="fu">paste0</span>(cred[<span class="dv">3</span>], <span class="st">&quot;/odata/v1/Products(&#39;&quot;</span>, x, <span class="st">&quot;&#39;)/&quot;</span>, field), cred[<span class="dv">1</span>], cred[<span class="dv">2</span>])))</span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="co"># correct:</span></span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="fu">lapply</span>(uuid, <span class="cf">function</span>(x) <span class="fu">content</span>(<span class="fu">.get</span>(<span class="fu">paste0</span>(cred[<span class="dv">3</span>], <span class="st">&quot;odata/v1/Products(&#39;&quot;</span>, x, <span class="st">&quot;&#39;)/&quot;</span>, field), cred[<span class="dv">1</span>], cred[<span class="dv">2</span>])))</span></code></pre></div>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># wrong:</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">lapply</span>(uuid, <span class="cf">function</span>(x) <span class="fu">content</span>(<span class="fu">.get</span>(<span class="fu">paste0</span>(cred[<span class="dv">3</span>], <span class="st">&quot;/odata/v1/Products(&#39;&quot;</span>, x, <span class="st">&quot;&#39;)/&quot;</span>, field), cred[<span class="dv">1</span>], cred[<span class="dv">2</span>])))</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="co"># correct:</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="fu">lapply</span>(uuid, <span class="cf">function</span>(x) <span class="fu">content</span>(<span class="fu">.get</span>(<span class="fu">paste0</span>(cred[<span class="dv">3</span>], <span class="st">&quot;odata/v1/Products(&#39;&quot;</span>, x, <span class="st">&quot;&#39;)/&quot;</span>, field), cred[<span class="dv">1</span>], cred[<span class="dv">2</span>])))</span></code></pre></div>
 <p><strong>Which workflow do you propose?</strong></p>
 </div>
 <div id="github-pages" class="slide section level1">
@@ -282,6 +296,27 @@ This is a demonstration for a simple but effective webpage on Github.
 
 Click [here](presentation.html) for a presentation about git and Github.
 </code></pre>
+</div>
+<div id="real-world-example-publications" class="slide section level1">
+<h1>Real World Example: Publications</h1>
+<p>Include a repository in your scientific publication</p>
+<p>“All computations were done in R (Version 4.0.2; [38]). All presented methods are provided as the R-package uavRmp (<a href="https://gisma.github.io/uavRmp/" class="uri">https://gisma.github.io/uavRmp/</a>) and the Metashape Python Scripts (<a href="https://github.com/envima/MetashapeTools" class="uri">https://github.com/envima/MetashapeTools</a>).”</p>
+<p>Ludwig et al. 2020</p>
+<p>The ELC10 dataset is available here: <a href="https://doi.org/10.5281/zenodo.4407051" class="uri">https://doi.org/10.5281/zenodo.4407051</a> JavaScript and R code to reproduce ELC10 is available here: <a href="https://github.com/NINAnor/ELC10" class="uri">https://github.com/NINAnor/ELC10</a></p>
+<p>Venter et al. 2021</p>
+</div>
+<div id="include-large-files" class="slide section level1">
+<h1>Include large files</h1>
+<ul>
+<li><a href="https://dvc.org/features">DVC: Data Version Control</a></li>
+<li><a href="https://git-lfs.github.com/">LFS: Large File Storage</a></li>
+</ul>
+<p>Track large files by including them with text-based pointers</p>
+<pre><code>outs:
+- md5: 13ff4c5c6672752b90da533b408d0024.dir
+  size: 1416965813
+  nfiles: 13
+  path: data/sentinel2</code></pre>
 </div>
 <div id="online-learning-ressources" class="slide section level1">
 <h1>Online Learning Ressources</h1>

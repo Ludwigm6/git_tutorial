@@ -108,9 +108,21 @@ git merge  # to merge two branches together
 * ...
 
 
+# Github related commands
+
+```{bash, eval = FALSE}
+git remote
+git push
+git pull
+```
+
+* Forking
+* Pull requests
 
 
+# Rstudio Integration
 
+Rstudio can serve as a powerful user interface for git!
 
 
 
@@ -133,6 +145,12 @@ lapply(uuid, function(x) content(.get(paste0(cred[3], "odata/v1/Products('", x, 
 
 
 **Which workflow do you propose?**
+
+
+
+
+
+
 
 
 # Github Pages
@@ -158,6 +176,38 @@ This is a demonstration for a simple but effective webpage on Github.
 
 Click [here](presentation.html) for a presentation about git and Github.
 
+```
+
+
+
+# Real World Example: Publications
+
+Include a repository in your scientific publication
+
+"All computations were done in R (Version 4.0.2; [38]). All presented methods are provided as the R-package uavRmp (https://gisma.github.io/uavRmp/) and the Metashape Python Scripts (https://github.com/envima/MetashapeTools)."
+
+Ludwig et al. 2020
+
+
+The ELC10 dataset is available here: https://doi.org/10.5281/zenodo.4407051 JavaScript and R code to reproduce ELC10 is available here: https://github.com/NINAnor/ELC10
+
+Venter et al. 2021
+
+
+
+# Include large files
+
+* [DVC: Data Version Control](https://dvc.org/features)
+* [LFS: Large File Storage](https://git-lfs.github.com/)
+
+Track large files by including them with text-based pointers
+
+```
+outs:
+- md5: 13ff4c5c6672752b90da533b408d0024.dir
+  size: 1416965813
+  nfiles: 13
+  path: data/sentinel2
 ```
 
 
