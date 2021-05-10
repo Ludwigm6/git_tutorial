@@ -1,0 +1,161 @@
+---
+title: "Introduction to Version Control"
+author: "Marvin Ludwig"
+output: slidy_presentation
+---
+
+
+# Git
+
+* Version Control System
+* Developed by Linus Torvalds to work on the Linux Kernel with mutliple people
+* Mainly for Code, but useful for many other things
+
+![](https://upload.wikimedia.org/wikipedia/commons/e/e0/Git-logo.svg){width=250px}
+
+
+# Why Version Control?
+
+* "forces" some good habits
+* structured thinking
+* structured working in small chunks
+* goal-oriented
+* (supports Open-Source development)
+
+
+# Get git
+
+* [https://git-scm.com/download/](https://git-scm.com/download/)
+* preinstalled on most GNU/Linux distributions
+* GUI Versions available (NOT recommended for beginners)
+
+
+
+# Git workflow
+
+* Application with a learning curve
+* Simple but easy to mess something up
+
+
+```{bash, eval = FALSE}
+git status
+git add
+git commit
+```
+
+
+
+
+# .gitignore
+
+* exclude files and filetypes
+* typical example for an R project:
+
+```{bash, eval = FALSE}
+.Rhistory
+/data/
+*.tif
+```
+
+
+
+# GitHub
+
+* platform for code sharing
+* smooth integration into the git workflow
+* makes collaborations easy
+* *"Developers Social Media"*
+
+
+
+<table><tr>
+<td>
+![](https://logosmarken.com/wp-content/uploads/2020/12/GitHub-Logo.png){height=100px}
+</td>
+
+<td>
+![](https://about.gitlab.com/images/press/logo/png/gitlab-logo-gray-stacked-rgb.png){height=100px}
+</td>
+
+<td>
+![](https://poeditor.com/blog/wp-content/uploads/2014/06/bitbucket-logo.png){height=100px}
+</td>
+</tr></table>
+
+
+
+# Github
+
+* Core unit: **A repository**
+* Contains files, code, documentation, installation guide, (data)...
+
+## Additional features
+
+* Wiki
+* Issue - Tracker
+* Automation
+* ...
+
+
+
+
+
+
+
+
+# Real World Example: Bugfix
+
+There is a small Bug in the r-package `getSpatialData`
+
+[https://github.com/16EAGLE/getSpatialData](https://github.com/16EAGLE/getSpatialData)
+
+
+In the file `R/internal_clients.R` Line 40:
+
+```{r, eval = FALSE}
+# wrong:
+lapply(uuid, function(x) content(.get(paste0(cred[3], "/odata/v1/Products('", x, "')/", field), cred[1], cred[2])))
+
+# correct:
+lapply(uuid, function(x) content(.get(paste0(cred[3], "odata/v1/Products('", x, "')/", field), cred[1], cred[2])))
+```
+
+
+> Which workflow do you propose?
+
+
+# Github Pages
+
+Github can serve webpages!
+
+* markdown based
+* syntax highlighting
+
+Contents of docs/index.Rmd
+
+```{}
+
+---
+title: "Introduction to Version Control"
+author: "Marvin Ludwig"
+output: html_document
+---
+
+# Github Pages Demo
+
+This is a demonstration for a simple but effective webpage on Github.
+
+Click [here](presentation.html) for a presentation about git and Github.
+
+```
+
+
+
+# Online Learning Ressources
+
+[Beginner's Guide to Git and Github](https://morioh.com/p/44ff44c19c6e)
+
+[Youtube Video: University lecture with comprehensive technical explanation](https://www.youtube.com/watch?v=2sjqTHE0zok)
+
+[Official Github Ressources: Quickstart Guide](https://docs.github.com/en/github/getting-started-with-github/quickstart)
+
