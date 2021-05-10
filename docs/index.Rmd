@@ -1,0 +1,28 @@
+---
+title: "Introduction to Version Control"
+author: "Marvin Ludwig"
+output: slidy_presentation
+---
+
+
+# Git
+
+* Version Control System
+* Application with a learning curve
+* Developed by Linus Torvalds to work on the Linux Kernel with mutliple people
+* Mainly for Code, but useful for many other things
+
+![](https://de.wikipedia.org/wiki/Git#/media/Datei:Git-logo.svg)
+
+
+# Why Version Control?
+
+* structured thinking
+* structured working in small chunks
+* goal-oriented
+
+
+# 
+
+
+
