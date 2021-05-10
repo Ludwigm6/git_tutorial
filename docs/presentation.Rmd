@@ -29,7 +29,7 @@ output: slidy_presentation
 * preinstalled on most GNU/Linux distributions
 * GUI Versions available (NOT recommended for beginners)
 
-
+![](https://i.imgur.com/VC03Kas.gif){width=500px}
 
 # Git workflow
 
@@ -45,11 +45,15 @@ git commit
 
 
 
-# Git Branches
+# Git Branches - The tree model
 
-![](https://bluecast.tech/wp-content/uploads/2019/09/git-switch-branch-.png)
+![*https://bluecast.tech/wp-content/uploads/2019/09/git-switch-branch*](https://bluecast.tech/wp-content/uploads/2019/09/git-switch-branch-.png)
 
-
+```{bash, eval = FALSE}
+git branch # to create a new branch
+git switch # to switch between branches
+git merge  # to merge two branches together
+```
 
 
 
@@ -128,7 +132,7 @@ lapply(uuid, function(x) content(.get(paste0(cred[3], "odata/v1/Products('", x, 
 ```
 
 
-> Which workflow do you propose?
+**Which workflow do you propose?**
 
 
 # Github Pages
