@@ -45,6 +45,13 @@ git commit
 
 
 
+# Git Branches
+
+![](https://bluecast.tech/wp-content/uploads/2019/09/git-switch-branch-.png)
+
+
+
+
 
 # .gitignore
 
