@@ -2,6 +2,7 @@
 title: "Introduction to Version Control"
 author: "Marvin Ludwig"
 output: html_document
+theme: slate
 ---
 
 # Github Pages Demo
