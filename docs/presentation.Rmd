@@ -1,11 +1,13 @@
 ---
 title: "Introduction to Version Control"
 author: "Marvin Ludwig"
-output: slidy_presentation
+output: 
+    slidy_presentation:
+        highlight: pygments
+        theme: cerulean
 ---
 
-
-# Git
+# git
 
 * Version Control System
 * Developed by Linus Torvalds to work on the Linux Kernel with mutliple people
@@ -17,9 +19,9 @@ output: slidy_presentation
 # Why Version Control?
 
 * "forces" some good habits
-* structured thinking
-* structured working in small chunks
-* goal-oriented
+    * structured thinking
+    * structured working in small chunks
+    * goal-oriented
 * (supports Open-Source development)
 
 
@@ -29,29 +31,33 @@ output: slidy_presentation
 * preinstalled on most GNU/Linux distributions
 * GUI Versions available (NOT recommended for beginners)
 
-![](https://i.imgur.com/VC03Kas.gif){width=500px}
+![](https://i.imgur.com/VC03Kas.gif){width=700px}
 
-# Git workflow
+# git Workflow
 
 * Application with a learning curve
 * Simple but easy to mess something up
 
 
 ```{bash, eval = FALSE}
-git status
-git add
-git commit
+git status # to get infos
+
+git add    # to add files to the tracking system
+
+git commit # to define changed files as the new standard
 ```
 
 
 
-# Git Branches - The tree model
+# Git Branches - The Tree Model
 
-![*https://bluecast.tech/wp-content/uploads/2019/09/git-switch-branch*](https://bluecast.tech/wp-content/uploads/2019/09/git-switch-branch-.png)
+![*https://bluecast.tech/wp-content/uploads/2019/09/git-switch-branch*](https://bluecast.tech/wp-content/uploads/2019/09/git-switch-branch-.png){width=900px}
 
 ```{bash, eval = FALSE}
 git branch # to create a new branch
+
 git switch # to switch between branches
+
 git merge  # to merge two branches together
 ```
 
@@ -95,12 +101,12 @@ git merge  # to merge two branches together
 
 
 
-# Github
+# GitHub
 
 * Core unit: **A repository**
 * Contains files, code, documentation, installation guide, (data)...
 
-## Additional features
+## Additional Features
 
 * Wiki
 * Issue - Tracker
@@ -108,13 +114,18 @@ git merge  # to merge two branches together
 * ...
 
 
-# Github related commands
+# Github Related Commands
 
 ```{bash, eval = FALSE}
 git remote
+
 git push
+
 git pull
 ```
+
+
+## Further Actions
 
 * Forking
 * Pull requests
@@ -122,9 +133,9 @@ git pull
 
 # Rstudio Integration
 
-Rstudio can serve as a powerful user interface for git!
+Rstudio is a powerful user interface for git!
 
-
+![](rstudio_git.png){width=1000px}
 
 # Real World Example: Bugfix
 
@@ -148,12 +159,7 @@ lapply(uuid, function(x) content(.get(paste0(cred[3], "odata/v1/Products('", x, 
 
 
 
-
-
-
-
-
-# Github Pages
+# GitHub Pages
 
 Github can serve webpages!
 
@@ -182,20 +188,17 @@ Click [here](presentation.html) for a presentation about git and Github.
 
 # Real World Example: Publications
 
-Include a repository in your scientific publication
-
-"All computations were done in R (Version 4.0.2; [38]). All presented methods are provided as the R-package uavRmp (https://gisma.github.io/uavRmp/) and the Metashape Python Scripts (https://github.com/envima/MetashapeTools)."
-
-Ludwig et al. 2020
+> All computations were done in R (Version 4.0.2; [38]). All presented methods are provided as the R-package uavRmp (https://gisma.github.io/uavRmp/) and the Metashape Python Scripts (https://github.com/envima/MetashapeTools). - Ludwig et al. 2020
 
 
-The ELC10 dataset is available here: https://doi.org/10.5281/zenodo.4407051 JavaScript and R code to reproduce ELC10 is available here: https://github.com/NINAnor/ELC10
+<hr>
 
-Venter et al. 2021
+> The ELC10 dataset is available here: https://doi.org/10.5281/zenodo.4407051 JavaScript and R code to reproduce ELC10 is available here: https://github.com/NINAnor/ELC10 - Venter et al. 2021
 
 
 
-# Include large files
+
+# Include Large Files
 
 * [DVC: Data Version Control](https://dvc.org/features)
 * [LFS: Large File Storage](https://git-lfs.github.com/)
@@ -220,3 +223,16 @@ outs:
 
 [Official Github Ressources: Quickstart Guide](https://docs.github.com/en/github/getting-started-with-github/quickstart)
 
+
+
+<style type="text/css">
+body, td {
+   font-size: 16px;
+}
+code.r{
+  font-size: 25px;
+}
+code.bash{
+  font-size: 25px;
+}
+</style>
