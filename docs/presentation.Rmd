@@ -37,6 +37,12 @@ output:
 
 * Application with a learning curve
 * Simple but easy to mess something up
+* Core unit: **A repository**
+
+
+```{bash, eval = FALSE}
+git init    # to start
+```
 
 
 ```{bash, eval = FALSE}
@@ -103,7 +109,7 @@ git merge  # to merge two branches together
 
 # GitHub
 
-* Core unit: **A repository**
+* "Cloud storage" for git repositories
 * Contains files, code, documentation, installation guide, (data)...
 
 ## Additional Features
@@ -117,11 +123,16 @@ git merge  # to merge two branches together
 # Github Related Commands
 
 ```{bash, eval = FALSE}
-git remote
+git remote    # to get infos about remote
 
-git push
+git push      # to send commits to remote
 
-git pull
+git pull      # to download commits from remote
+```
+
+
+```{bash, eval = FALSE}
+git clone     # to download a repository
 ```
 
 
@@ -131,11 +142,36 @@ git pull
 * Pull requests
 
 
+# Overview
+
+![*https://miro.medium.com/max/700/1*9qX9F9MGsWKfcmgTOR9BPw.png*](https://miro.medium.com/max/700/1*9qX9F9MGsWKfcmgTOR9BPw.png){width=1000px}
+
+
+
 # Rstudio Integration
 
 Rstudio is a powerful user interface for git!
 
 ![](rstudio_git.png){width=1000px}
+
+# RealWorld Example: R packages
+
+
+[https://github.com/HannaMeyer/CAST](https://github.com/HannaMeyer/CAST)
+
+
+```{r, eval = FALSE}
+
+install.packages("CAST")
+
+devtools::install_github(repo = "https://github.com/HannaMeyer/CAST")
+
+remotes::install_github(repo = "https://github.com/HannaMeyer/CAST")
+
+```
+
+
+
 
 # Real World Example: Bugfix
 
@@ -156,6 +192,16 @@ lapply(uuid, function(x) content(.get(paste0(cred[3], "odata/v1/Products('", x, 
 
 
 **Which workflow do you propose?**
+
+
+# Real World Example: Publications
+
+> All computations were done in R (Version 4.0.2; [38]). All presented methods are provided as the R-package uavRmp (https://gisma.github.io/uavRmp/) and the Metashape Python Scripts (https://github.com/envima/MetashapeTools). - Ludwig et al. 2020
+
+
+<hr>
+
+> The ELC10 dataset is available here: https://doi.org/10.5281/zenodo.4407051 JavaScript and R code to reproduce ELC10 is available here: https://github.com/NINAnor/ELC10 - Venter et al. 2021
 
 
 
@@ -183,17 +229,6 @@ This is a demonstration for a simple but effective webpage on Github.
 Click [here](presentation.html) for a presentation about git and Github.
 
 ```
-
-
-
-# Real World Example: Publications
-
-> All computations were done in R (Version 4.0.2; [38]). All presented methods are provided as the R-package uavRmp (https://gisma.github.io/uavRmp/) and the Metashape Python Scripts (https://github.com/envima/MetashapeTools). - Ludwig et al. 2020
-
-
-<hr>
-
-> The ELC10 dataset is available here: https://doi.org/10.5281/zenodo.4407051 JavaScript and R code to reproduce ELC10 is available here: https://github.com/NINAnor/ELC10 - Venter et al. 2021
 
 
 
