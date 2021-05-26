@@ -88,6 +88,7 @@ git merge  # to merge two branches together
 * smooth integration into the git workflow
 * makes collaborations easy
 * *"Developers Social Media"*
+* scientific communication
 
 
 
@@ -215,11 +216,12 @@ Github can serve webpages!
 Contents of docs/index.Rmd
 
 ```{}
-
 ---
 title: "Introduction to Version Control"
 author: "Marvin Ludwig"
 output: html_document
+theme: slate
+layout: page
 ---
 
 # Github Pages Demo
@@ -228,6 +230,7 @@ This is a demonstration for a simple but effective webpage on Github.
 
 Click [here](presentation.html) for a presentation about git and Github.
 
+Click [here](report.html) for an example report demonstrating scientific communication.
 ```
 
 

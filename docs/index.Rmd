@@ -3,6 +3,7 @@ title: "Introduction to Version Control"
 author: "Marvin Ludwig"
 output: html_document
 theme: slate
+layout: page
 ---
 
 # Github Pages Demo
@@ -10,4 +11,8 @@ theme: slate
 This is a demonstration for a simple but effective webpage on Github.
 
 Click [here](presentation.html) for a presentation about git and Github.
+
+Click [here](report.html) for an example report demonstrating scientific communication.
+
+
 

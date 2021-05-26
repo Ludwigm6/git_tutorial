@@ -1,0 +1,79 @@
+---
+title: "Report: Glueckauf Park"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: scroll
+---
+
+```{r setup, include=FALSE}
+library(flexdashboard)
+library(tidyverse)
+library(raster)
+library(RStoolbox)
+
+report_maps = readRDS("~/casestudies/Glueckauf/report_maps/report_maps.RDS")
+
+vegetation = raster("~/casestudies/Glueckauf/report_maps/vegetation.tif")
+vegetation = raster::readAll(vegetation)
+
+```
+
+Column {data-width=50%}
+-----------------------------------------------------------------------
+
+### Overview
+
+
+
+
+```{r}
+report_maps$report_rgb
+```
+
+Glückauf Park. Vegetationsanalyse
+
+
+Column {data-width=50%}
+-----------------------------------------------------------------------
+
+### Vegetation
+
+Simple mapping of vegetation based on MSAVI2 threshold
+
+<br>
+
+```{r}
+report_maps$report_vegetation
+```
+
+
+### Vegetationsanteil im Park
+
+```{r}
+
+veg = as.data.frame(table(vegetation@data@values))
+colnames(veg) = c("Bedeckung", "Pixel")
+veg = veg %>% mutate(Flaeche = round(Pixel * xres(vegetation)**2 / 10000, 2)) %>% 
+    mutate(Anteil = Flaeche / sum(Flaeche)*100)
+
+
+veg_pretty = veg %>% mutate(Bedeckung = c("0" = "Sonstiges", "1" = "Vegetation")) %>% 
+    mutate(Flaeche = paste0(Flaeche, " ha")) %>% 
+    mutate(Anteil = paste0(round(Anteil, 2), " %")) %>% 
+    dplyr::select(-Pixel)
+
+knitr::kable(veg_pretty)
+```
+
+
+
+
+### Vegetation Texture
+
+Vegetation in the east seems to be more heterogenous.
+
+```{r, fig}
+report_maps$report_texture
+```
+
