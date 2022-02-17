@@ -29,7 +29,7 @@ output:
 
 * [https://git-scm.com/download/](https://git-scm.com/download/)
 * preinstalled on most GNU/Linux distributions
-* GUI Versions available (NOT recommended for beginners)
+* GUI Versions available
 
 ![](https://i.imgur.com/VC03Kas.gif){width=700px}
 
@@ -155,11 +155,14 @@ Rstudio is a powerful user interface for git!
 
 ![](rstudio_git.png){width=1000px}
 
-# RealWorld Example: R packages
+# Real World Example: R packages
 
 
 [https://github.com/HannaMeyer/CAST](https://github.com/HannaMeyer/CAST)
 
+
+
+Package Page created with `pkgdown`
 
 ```{r, eval = FALSE}
 
@@ -171,6 +174,7 @@ remotes::install_github(repo = "https://github.com/HannaMeyer/CAST")
 
 ```
 
+Package Page created with `pkgdown`: [https://hannameyer.github.io/CAST](https://hannameyer.github.io/CAST)
 
 
 
@@ -230,7 +234,6 @@ This is a demonstration for a simple but effective webpage on Github.
 
 Click [here](presentation.html) for a presentation about git and Github.
 
-Click [here](report.html) for an example report demonstrating scientific communication.
 ```
 
 
