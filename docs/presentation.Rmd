@@ -13,7 +13,7 @@ output:
 * Developed by Linus Torvalds to work on the Linux Kernel with mutliple people
 * Mainly for Code, but useful for many other things
 
-![](https://upload.wikimedia.org/wikipedia/commons/e/e0/Git-logo.svg){width=250px}
+![](https://upload.wikimedia.org/wikipedia/commons/e/e0/Git-logo.svg)
 
 
 # Why Version Control?

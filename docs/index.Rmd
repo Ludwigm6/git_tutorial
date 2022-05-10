@@ -11,7 +11,5 @@ This is a demonstration for a simple but effective webpage on Github.
 
 Click [here](presentation.html) for a presentation about git and Github.
 
-Click [here](report.html) for an example report demonstrating scientific communication.
-
 
 
